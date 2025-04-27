@@ -70,11 +70,6 @@ export default function BusDashboard() {
     setActiveSection("buses")
   }
 
-  const handleSelectRoute = (route: Route) => {
-    setSelectedRoute(route)
-    setActiveSection("routes")
-  }
-
   const renderContent = () => {
     switch (activeSection) {
       case "dashboard":
@@ -136,18 +131,6 @@ export default function BusDashboard() {
             </button>
           ))}
         </nav>
-
-        <div className="px-6 py-4 mt-auto border-t border-gray-800">
-          <div className="flex items-center">
-            <div className="h-8 w-8 rounded-full bg-blue-500 flex items-center justify-center">
-              <span className="font-semibold text-sm">J</span>
-            </div>
-            <div className="ml-3">
-              <p className="text-sm font-medium">Admin User</p>
-              <p className="text-xs text-gray-400">Administrator</p>
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* Main Content */}
