@@ -96,8 +96,8 @@ export function RouteManagement({ db, routes, selectedRoute, setSelectedRoute }:
         
         // Select the new route
         setSelectedRoute({
-          id: routeDoc.id,
           ...routeFormData as Route,
+          id: routeDoc.id,
           stops: [],
           createdAt: new Date().toISOString(),
           updatedAt: new Date().toISOString()
@@ -213,8 +213,8 @@ export function RouteManagement({ db, routes, selectedRoute, setSelectedRoute }:
       } else {
         // Add new stop to the route
         const newStop: Stop = {
-          id: `stop_${Date.now()}`, // Generate a temporary ID
           ...stopFormData as Required<Omit<typeof stopFormData, 'description'>> & { description?: string },
+          id: `stop_${Date.now()}`, // Generate a temporary ID
           audioUrl,
           createdAt: new Date().toISOString()
         }

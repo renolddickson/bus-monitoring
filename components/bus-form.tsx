@@ -26,7 +26,7 @@ export function BusForm({ db, bus, onClose }: BusFormProps) {
   }>({
     busId: bus?.busId || "",
     name: bus?.name || "",
-    route: bus?.route || "",
+    route: bus?.routeId || "",
   })
 
   const [loading, setLoading] = useState(false)
